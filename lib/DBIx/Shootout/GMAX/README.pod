@@ -1,0 +1,17 @@
+=head1 NAME
+
+  DBIx::Shootout::GMAX::*
+
+=head1 DESCRIPTION
+
+Giuseppe Maxia created a large test database:
+
+ L<https://launchpad.net/test-db>
+
+It came ready for loading into MySQL. I have reworked it for the DBIx::Shootout to work under SQLite.
+
+You can view a graphic of the schema by loading F<schema.architect> using the free (and excellent)
+SQL Power Architect 
+
+L<http://www.sqlpower.ca/page/architect>
+

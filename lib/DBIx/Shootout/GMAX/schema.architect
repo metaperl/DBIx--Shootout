@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<architect-project version="1.0" appversion="0.9.13">
+ <project-name>schema</project-name>
+ <print-settings numCopies="1" zoom="1.0" pageNumbersPrinted="true" orientation="1" paperWidth="612.0" paperHeight="792.0" leftBorder="50.0" rightBorder="50.0" topBorder="50.0" bottomBorder="50.0" />
+ <project-data-sources>
+  <data-source id="DS0">
+  </data-source>
+ </project-data-sources>
+ <source-databases>
+ </source-databases>
+ <target-database id="ppdb" dbcs-ref="DS0">
+  <table id="TAB1" populated="true" name="employees" objectType="TABLE" physicalName="employees" remarks="" >
+   <folder id="FOL2" populated="true" name="Columns" physicalName="Columns" type="1" >
+    <column id="COL3" populated="true" autoIncrement="false" autoIncrementSequenceName="employees_emp_no_seq" defaultValue="" name="emp_no" nullable="0" physicalName="emp_no" precision="10" primaryKeySeq="0" referenceCount="1" remarks="" scale="0" type="4" />
+    <column id="COL4" populated="true" autoIncrement="false" autoIncrementSequenceName="employees_birth_date_seq" defaultValue="" name="birth_date" nullable="0" physicalName="birth_date" precision="10" referenceCount="1" remarks="" scale="0" type="91" />
+    <column id="COL5" populated="true" autoIncrement="false" autoIncrementSequenceName="employees_first_name_seq" defaultValue="" name="first_name" nullable="0" physicalName="first_name" precision="10" referenceCount="1" remarks="" scale="0" type="12" />
+    <column id="COL6" populated="true" autoIncrement="false" autoIncrementSequenceName="employees_last_name_seq" defaultValue="" name="last_name" nullable="0" physicalName="last_name" precision="10" referenceCount="1" remarks="" scale="0" type="12" />
+    <column id="COL7" populated="true" autoIncrement="false" autoIncrementSequenceName="employees_gender_seq" defaultValue="" name="gender" nullable="0" physicalName="" precision="10" referenceCount="1" remarks="" scale="0" type="-7" />
+    <column id="COL8" populated="true" autoIncrement="false" autoIncrementSequenceName="employees_hire_data_seq" defaultValue="" name="hire_date" nullable="0" physicalName="hire_data" precision="10" referenceCount="1" remarks="" scale="0" type="91" />
+   </folder>
+   <folder id="FOL9" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3" >
+   </folder>
+   <folder id="FOL10" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2" >
+   </folder>
+   <folder id="FOL11" populated="true" name="Indices" physicalName="Indices" type="4" >
+    <index id="IDX12" populated="true" clustered="false" name="employees_pk" physicalName="employees_pk" primaryKeyIndex="true" unique="true" >
+     <index-column id="IDC13" populated="true" ascendingOrDescending="UNSPECIFIED" column-ref="COL3" name="emp_no" physicalName="emp_no" />
+    </index>
+   </folder>
+  </table>
+  <table id="TAB14" populated="true" name="departments" objectType="TABLE" physicalName="departments" remarks="" >
+   <folder id="FOL15" populated="true" name="Columns" physicalName="Columns" type="1" >
+    <column id="COL16" populated="true" autoIncrement="false" autoIncrementSequenceName="departments_dept_no_seq" defaultValue="" name="dept_no" nullable="0" physicalName="" precision="10" primaryKeySeq="0" referenceCount="1" remarks="" scale="0" type="1" />
+    <column id="COL17" populated="true" autoIncrement="false" autoIncrementSequenceName="departments_dept_name_seq" defaultValue="" name="dept_name" nullable="0" physicalName="dept_name" precision="10" referenceCount="1" remarks="" scale="0" type="12" />
+   </folder>
+   <folder id="FOL18" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3" >
+   </folder>
+   <folder id="FOL19" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2" >
+   </folder>
+   <folder id="FOL20" populated="true" name="Indices" physicalName="Indices" type="4" >
+    <index id="IDX21" populated="true" clustered="false" name="departments_pk" physicalName="departments_pk" primaryKeyIndex="true" unique="true" >
+     <index-column id="IDC22" populated="true" ascendingOrDescending="UNSPECIFIED" column-ref="COL16" name="dept_no" physicalName="dept_no" />
+    </index>
+   </folder>
+  </table>
+  <table id="TAB23" populated="true" name="dept_manager" objectType="TABLE" physicalName="dept_manager" remarks="" >
+   <folder id="FOL24" populated="true" name="Columns" physicalName="Columns" type="1" >
+    <column id="COL25" populated="true" autoIncrement="false" autoIncrementSequenceName="dept_manager_emp_no_seq" defaultValue="" name="emp_no" nullable="0" physicalName="emp_no" precision="10" primaryKeySeq="0" referenceCount="2" remarks="" scale="0" type="4" />
+    <column id="COL26" populated="true" autoIncrement="false" autoIncrementSequenceName="dept_manager_dept_no_seq" defaultValue="" name="dept_no" nullable="0" physicalName="dept_no" precision="10" primaryKeySeq="1" referenceCount="2" remarks="" scale="0" type="1" />
+    <column id="COL27" populated="true" autoIncrement="false" autoIncrementSequenceName="dept_manager_from_date_seq" defaultValue="" name="from_date" nullable="0" physicalName="from_date" precision="10" referenceCount="1" remarks="" scale="0" type="91" />
+    <column id="COL28" populated="true" autoIncrement="false" autoIncrementSequenceName="dept_manager_to_date_seq" defaultValue="" name="to_date" nullable="0" physicalName="to_date" precision="10" referenceCount="1" remarks="" scale="0" type="91" />
+   </folder>
+   <folder id="FOL29" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3" >
+   </folder>
+   <folder id="FOL30" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2" >
+   </folder>
+   <folder id="FOL31" populated="true" name="Indices" physicalName="Indices" type="4" >
+    <index id="IDX32" populated="true" clustered="false" name="dept_manager_pk" physicalName="dept_manager_pk" primaryKeyIndex="true" unique="true" >
+     <index-column id="IDC33" populated="true" ascendingOrDescending="UNSPECIFIED" column-ref="COL25" name="emp_no" physicalName="emp_no" />
+     <index-column id="IDC34" populated="true" ascendingOrDescending="UNSPECIFIED" column-ref="COL26" name="dept_no" physicalName="dept_no" />
+    </index>
+   </folder>
+  </table>
+  <table id="TAB35" populated="true" name="dept_emp" objectType="TABLE" physicalName="dept_emp" remarks="" >
+   <folder id="FOL36" populated="true" name="Columns" physicalName="Columns" type="1" >
+    <column id="COL37" populated="true" autoIncrement="false" autoIncrementSequenceName="dept_emp_emp_no_seq" defaultValue="" name="emp_no" nullable="0" physicalName="emp_no" precision="10" primaryKeySeq="0" referenceCount="2" remarks="" scale="0" type="4" />
+    <column id="COL38" populated="true" autoIncrement="false" autoIncrementSequenceName="dept_emp_dept_no_seq" defaultValue="" name="dept_no" nullable="0" physicalName="dept_no" precision="10" primaryKeySeq="1" referenceCount="2" remarks="" scale="0" type="1" />
+    <column id="COL39" populated="true" autoIncrement="false" autoIncrementSequenceName="dept_emp_to_date_seq" defaultValue="" name="from_date" nullable="0" physicalName="to_date" precision="10" referenceCount="1" remarks="" scale="0" type="91" />
+    <column id="COL40" populated="true" autoIncrement="false" autoIncrementSequenceName="dept_emp_to_date_seq" defaultValue="" name="to_date" nullable="0" physicalName="to_date" precision="10" referenceCount="1" remarks="" scale="0" type="91" />
+   </folder>
+   <folder id="FOL41" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3" >
+   </folder>
+   <folder id="FOL42" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2" >
+   </folder>
+   <folder id="FOL43" populated="true" name="Indices" physicalName="Indices" type="4" >
+    <index id="IDX44" populated="true" clustered="false" name="dept_emp_pk" physicalName="dept_emp_pk" primaryKeyIndex="true" unique="true" >
+     <index-column id="IDC45" populated="true" ascendingOrDescending="UNSPECIFIED" column-ref="COL37" name="emp_no" physicalName="emp_no" />
+     <index-column id="IDC46" populated="true" ascendingOrDescending="UNSPECIFIED" column-ref="COL38" name="dept_no" physicalName="dept_no" />
+    </index>
+   </folder>
+  </table>
+  <table id="TAB47" populated="true" name="titles" objectType="TABLE" physicalName="titles" remarks="" >
+   <folder id="FOL48" populated="true" name="Columns" physicalName="Columns" type="1" >
+    <column id="COL49" populated="true" autoIncrement="false" autoIncrementSequenceName="titles_emp_no_seq" defaultValue="" name="emp_no" nullable="0" physicalName="" precision="10" primaryKeySeq="0" referenceCount="2" remarks="" scale="0" type="4" />
+    <column id="COL50" populated="true" autoIncrement="false" autoIncrementSequenceName="titles_title_seq" defaultValue="" name="title" nullable="0" physicalName="" precision="10" primaryKeySeq="1" referenceCount="1" remarks="" scale="0" type="12" />
+    <column id="COL51" populated="true" autoIncrement="false" autoIncrementSequenceName="titles_from_date_seq" defaultValue="" name="from_date" nullable="0" physicalName="" precision="10" primaryKeySeq="2" referenceCount="1" remarks="" scale="0" type="91" />
+    <column id="COL52" populated="true" autoIncrement="false" autoIncrementSequenceName="titles_to_date_seq" defaultValue="" name="to_date" nullable="0" physicalName="" precision="10" referenceCount="1" remarks="" scale="0" type="91" />
+   </folder>
+   <folder id="FOL53" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3" >
+   </folder>
+   <folder id="FOL54" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2" >
+   </folder>
+   <folder id="FOL55" populated="true" name="Indices" physicalName="Indices" type="4" >
+    <index id="IDX56" populated="true" clustered="false" name="titles_pk" physicalName="titles_pk" primaryKeyIndex="true" unique="true" >
+     <index-column id="IDC57" populated="true" ascendingOrDescending="UNSPECIFIED" column-ref="COL49" name="emp_no" physicalName="emp_no" />
+     <index-column id="IDC58" populated="true" ascendingOrDescending="UNSPECIFIED" column-ref="COL50" name="title" physicalName="title" />
+     <index-column id="IDC59" populated="true" ascendingOrDescending="UNSPECIFIED" column-ref="COL51" name="from_date" physicalName="from_date" />
+    </index>
+   </folder>
+  </table>
+  <table id="TAB60" populated="true" name="salaries" objectType="TABLE" physicalName="salaries" remarks="	" >
+   <folder id="FOL61" populated="true" name="Columns" physicalName="Columns" type="1" >
+    <column id="COL62" populated="true" autoIncrement="false" autoIncrementSequenceName="salaries_emp_no_seq" defaultValue="" name="emp_no" nullable="0" physicalName="" precision="10" primaryKeySeq="0" referenceCount="2" remarks="" scale="0" type="4" />
+    <column id="COL63" populated="true" autoIncrement="false" autoIncrementSequenceName="salaries_from_date_seq" defaultValue="" name="from_date" nullable="0" physicalName="" precision="10" primaryKeySeq="1" referenceCount="1" remarks="" scale="0" type="91" />
+    <column id="COL64" populated="true" autoIncrement="false" autoIncrementSequenceName="salaries_salary_seq" defaultValue="" name="salary" nullable="0" physicalName="" precision="10" referenceCount="1" remarks="" scale="0" type="4" />
+    <column id="COL65" populated="true" autoIncrement="false" autoIncrementSequenceName="salaries_to_date_seq" defaultValue="" name="to_date" nullable="0" physicalName="" precision="10" referenceCount="1" remarks="" scale="0" type="91" />
+   </folder>
+   <folder id="FOL66" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3" >
+   </folder>
+   <folder id="FOL67" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2" >
+   </folder>
+   <folder id="FOL68" populated="true" name="Indices" physicalName="Indices" type="4" >
+    <index id="IDX69" populated="true" clustered="false" name="salaries_pk" physicalName="salaries_pk" primaryKeyIndex="true" unique="true" >
+     <index-column id="IDC70" populated="true" ascendingOrDescending="UNSPECIFIED" column-ref="COL62" name="emp_no" physicalName="emp_no" />
+     <index-column id="IDC71" populated="true" ascendingOrDescending="UNSPECIFIED" column-ref="COL63" name="from_date" physicalName="from_date" />
+    </index>
+   </folder>
+  </table>
+  <relationships>
+   <relationship id="REL72" populated="true" deferrability="7" deleteRule="3" fk-table-ref="TAB23" fkCardinality="7" identifying="true" name="employees_dept_manager_fk" physicalName="employees_dept_manager_fk" pk-table-ref="TAB1" pkCardinality="2" updateRule="3" >
+    <column-mapping id="CMP73" populated="true" fk-column-ref="COL25" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL3" />
+   </relationship>
+   <relationship id="REL74" populated="true" deferrability="7" deleteRule="3" fk-table-ref="TAB35" fkCardinality="7" identifying="true" name="employees_dept_emp_fk" physicalName="employees_dept_emp_fk" pk-table-ref="TAB1" pkCardinality="2" updateRule="3" >
+    <column-mapping id="CMP75" populated="true" fk-column-ref="COL37" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL3" />
+   </relationship>
+   <relationship id="REL76" populated="true" deferrability="7" deleteRule="3" fk-table-ref="TAB60" fkCardinality="7" identifying="true" name="employees_salaries_fk" physicalName="employees_salaries_fk" pk-table-ref="TAB1" pkCardinality="2" updateRule="3" >
+    <column-mapping id="CMP77" populated="true" fk-column-ref="COL62" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL3" />
+   </relationship>
+   <relationship id="REL78" populated="true" deferrability="7" deleteRule="3" fk-table-ref="TAB47" fkCardinality="7" identifying="true" name="employees_titles_fk" physicalName="employees_titles_fk" pk-table-ref="TAB1" pkCardinality="2" updateRule="3" >
+    <column-mapping id="CMP79" populated="true" fk-column-ref="COL49" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL3" />
+   </relationship>
+   <relationship id="REL80" populated="true" deferrability="7" deleteRule="3" fk-table-ref="TAB23" fkCardinality="7" identifying="true" name="departments_dept_manager_fk" physicalName="departments_dept_manager_fk" pk-table-ref="TAB14" pkCardinality="2" updateRule="3" >
+    <column-mapping id="CMP81" populated="true" fk-column-ref="COL26" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL16" />
+   </relationship>
+   <relationship id="REL82" populated="true" deferrability="7" deleteRule="3" fk-table-ref="TAB35" fkCardinality="7" identifying="true" name="departments_dept_emp_fk" physicalName="departments_dept_emp_fk" pk-table-ref="TAB14" pkCardinality="2" updateRule="3" >
+    <column-mapping id="CMP83" populated="true" fk-column-ref="COL38" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL16" />
+   </relationship>
+   <reference ref-id="REL80" />
+   <reference ref-id="REL72" />
+   <reference ref-id="REL74" />
+   <reference ref-id="REL82" />
+   <reference ref-id="REL78" />
+   <reference ref-id="REL76" />
+  </relationships>
+ </target-database>
+ <ddl-generator type="ca.sqlpower.architect.ddl.GenericDDLGenerator" allow-connection="true"> </ddl-generator>
+ <create-kettle-job-settings filePath="" jobName="" schemaName="" kettleJoinType="0" savingToFile="true" />
+ <play-pen zoom="1.0" viewportX="0" viewportY="0" relationship-style="rectilinear" names-displayLogicalNames="true" showPrimaryTag="true" showForeignTag="true" showAlternateTag="true" columnVisibility="ALL" relationshipLabelVisibility="true">
+  <table-pane table-ref="TAB1" x="89" y="67" bgColor="0xf0f0f0" fgColor="0x000000" rounded="false" dashed="false"/>
+  <table-pane table-ref="TAB14" x="744" y="105" bgColor="0xf0f0f0" fgColor="0x000000" rounded="false" dashed="false"/>
+  <table-pane table-ref="TAB23" x="415" y="79" bgColor="0xf0f0f0" fgColor="0x000000" rounded="false" dashed="false"/>
+  <table-pane table-ref="TAB35" x="412" y="259" bgColor="0xf0f0f0" fgColor="0x000000" rounded="false" dashed="false"/>
+  <table-pane table-ref="TAB47" x="18" y="378" bgColor="0xf0f0f0" fgColor="0x000000" rounded="false" dashed="false"/>
+  <table-pane table-ref="TAB60" x="182" y="377" bgColor="0xf0f0f0" fgColor="0x000000" rounded="false" dashed="false"/>
+  <table-link relationship-ref="REL80" pk-x="0" pk-y="26" fk-x="152" fk-y="52" rLineColor="0x333333" pkLabelText="" fkLabelText="" orientation="18"/>
+  <table-link relationship-ref="REL72" pk-x="148" pk-y="61" fk-x="0" fk-y="49" rLineColor="0x333333" pkLabelText="" fkLabelText="" orientation="33"/>
+  <table-link relationship-ref="REL74" pk-x="148" pk-y="93" fk-x="0" fk-y="17" rLineColor="0x333333" pkLabelText="" fkLabelText="" orientation="33"/>
+  <table-link relationship-ref="REL76" pk-x="127" pk-y="127" fk-x="34" fk-y="0" rLineColor="0x333333" pkLabelText="" fkLabelText="" orientation="132"/>
+  <table-link relationship-ref="REL82" pk-x="70" pk-y="63" fk-x="83" fk-y="0" rLineColor="0x333333" pkLabelText="" fkLabelText="" orientation="132"/>
+  <table-link relationship-ref="REL78" pk-x="68" pk-y="127" fk-x="79" fk-y="0" rLineColor="0x333333" pkLabelText="" fkLabelText="" orientation="132"/>
+ </play-pen>
+ <profiles topNCount="10">
+  </profiles>
+  <olap>
+  </olap>
+  <olap-gui>
+  </olap-gui>
+</architect-project>

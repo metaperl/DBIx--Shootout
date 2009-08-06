@@ -21,20 +21,22 @@ EMP->Association([qw/Employee   employee  1 emp_no/],
 EMP->Association([qw/Employee   employee  1 emp_no/],
 		 [qw/Salary     salary    1 emp_no/]);
 
-# m-to-n
-EMP->Association([qw/Employee   employee    1/],
-		 [qw/Dept_Mgr   dept_mgrs   */]);
-EMP->Association([qw/Department department  1/],
-		 [qw/Dept_Mgr   dept_mgrs   */]);
-EMP->Association([qw/Employee   employee    * dept_mgrs department   /],
-		 [qw/Department department  * dept_mgrs employee /]);
+# m to n
+EMP->Association([qw/Employee   employee    1 /],
+		 [qw/Dept_Mgr   dept_mgr   * /]);
+EMP->Association([qw/Department department  1 /],
+		 [qw/Dept_Mgr   dept_mgr   * /]);
+EMP->Association([qw/Employee   employee    * dept_mgr employee/],
+		 [qw/Department department  * dept_mgr department/]);
+
+
 
 EMP->Association([qw/Employee   employee    1/],
 		 [qw/Dept_Emp   dept_emps   */]);
 EMP->Association([qw/Department department  1/],
 		 [qw/Dept_Emp   dept_emps   */]);
-# EMP->Association([qw/Employee   employee    * dept_emps department   /],
-# 		 [qw/Department department  * dept_emps employee /]);
+EMP->Association([qw/Employee   employees    * dept_emps employees   /],
+		 [qw/Department departmenst  * dept_emps departments /]);
 
 # Final relation would be redundant with above one... Hope this works.
 

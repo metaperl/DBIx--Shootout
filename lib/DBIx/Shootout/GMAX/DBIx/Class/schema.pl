@@ -2,19 +2,27 @@
 
 use lib "$ENV{BASE}/lib";
 
-use DBIx::Shootout::GMAX::DBIx::Class::Schema;
+use DBIx::Class::Schema::Loader qw/ make_schema_at /;
+
 use DBIx::Shootout::GMAX::DBH;
 
 use strict;
 use warnings;
 
 
-my $dbh = DBIx::Shootout::GMAX::DBH->dbh ;
-warn $dbh;
+my $dump_dir="$ENV{GMAX}/DBIx/Class";
+my $c = DBIx::Shootout::GMAX::DBH::connect_data;
 
-my $schema1 =  DBIx::Shootout::GMAX::DBIx::Class::Schema->connect
+make_schema_at 
   ( 
-   sub { $dbh, {} }
+   'GSchema',
+   {
+    debug => 1, 
+    dump_directory => $dump_dir,
+    },
+   [
+    $c->{dsn}, $c->{user}, $c->{pass}
+    ]
   );
 
 

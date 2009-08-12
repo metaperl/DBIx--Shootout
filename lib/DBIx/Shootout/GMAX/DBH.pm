@@ -2,7 +2,7 @@ package DBIx::Shootout::GMAX::DBH;
 
 use strict;
 
-my $dbfile = "$ENV{GMAX}/schema.sqlite3";
+my $dbfile = "$ENV{GMAX}/sampledb/schema.sqlite3";
 
 sub dbh {
 

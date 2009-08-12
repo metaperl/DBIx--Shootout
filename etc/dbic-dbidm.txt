@@ -1,0 +1,45 @@
+DBIx::Class and DBIx::DataModel
+===============================
+
+Row objects
+-----------
+
+By default:
+   DBIx::Class accesses columns of rows with methods.
+   DBIx::DataModel uses hashrefs.
+
+Both can switch to the other way.
+
+Modelling
+---------
+
+DBIx::Class does much more detailed modelling of tables. and the
+modelling is across classes --- "has_one" in one class ... "has_many"
+in another ... in DBIx::DataModel, you have a schema class that you
+express all associations in binary format (so you see both sides of
+the relation at once) 
+
+
+
+Schema and Table
+----------------
+
+Schema is a class in Datamodel. And it auto-generates tables as classes.
+Schema and tables are objects in DBIC.
+
+Why does this matter? 
+1 - multiple database connections with the same schema are
+possible. This is useful for perl cross-database joins.
+2 - You can pass around the schema and database any where in your
+program in encapsulated fashion
+3 - As robkinyon says: "packages are globals and globals are bad,
+mm'kay?"
+
+
+
+Authors
+-------
+DBIC comments from Matt Trout, Peter Rabbitson, and Rob Kinyon
+
+
+

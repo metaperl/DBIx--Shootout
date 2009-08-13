@@ -1,7 +1,10 @@
 #!/bin/env perl
 
 
-use lib "$ENV{BASE}/lib";
+use FindBin;
+
+use lib "$FindBin::Bin/../../../../..";
+
 
 use strict;
 use warnings;
@@ -18,16 +21,15 @@ EMP->dbh($dbh);
 
 warn $dbh;
 
-my $e = EMP::Employee->fetch(110022);
+my $e = EMP::Employees->fetch(110022);
 
 
 warn Dumper($e);
 
-warn $e->title->{title};
-warn $e->salary->{salary};
+warn Dumper($e->titles_role);
+warn Dumper($e->salaries_role);
+warn Dumper($e->departments_m2n);
 
-warn $e->department;
-warn $e->departments;
 
 
 

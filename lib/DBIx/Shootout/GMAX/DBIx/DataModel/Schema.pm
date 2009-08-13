@@ -23,11 +23,11 @@ EMP->Composition([qw/Employees   employees_role  1 emp_no/],
 		 [qw/Salaries    salaries_role   * emp_no/]);
 
 # m to n
-EMP->Association([qw/Employees    employee_role     1 /],
+EMP->Association([qw/Employees    employees_role     1 /],
 		 [qw/Dept_Manager dept_manager_role * /]);
 EMP->Association([qw/Departments  departments_role  1 /],
 		 [qw/Dept_Manager dept_manager_role * /]);
-EMP->Association([qw/Employees    employees_m2n     * dept_manager_role employee/],
+EMP->Association([qw/Employees    employees_m2n     * dept_manager_role employees_role/],
 		 [qw/Departments  departments_m2n   * dept_manager_role departments_role/]);
 
 

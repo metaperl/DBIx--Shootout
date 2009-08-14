@@ -32,11 +32,11 @@ EMP->Association([qw/Employees    employees_m2n     * dept_manager_role employee
 
 
 
-EMP->Association([qw/Employees   employees    1/],
-		 [qw/Dept_Emp   dept_emp   */]);
-EMP->Association([qw/Departments departments  1/],
-		 [qw/Dept_Emp   dept_emp   */]);
-
+EMP->Association([qw/Employees   employees_role    1/],
+		 [qw/Dept_Emp   dept_emp_role   */]);
+EMP->Association([qw/Departments departments_role  1/],
+		 [qw/Dept_Emp   dept_emp_role   */]);
+# _m2n relation already listed above
 
 
 

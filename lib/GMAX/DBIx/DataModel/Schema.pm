@@ -1,4 +1,4 @@
-package DBIx::Shootout::GMAX::DBIx::DataModel::Schema;
+package GMAX::DBIx::DataModel::Schema;
 
 
 use DBIx::DataModel;
@@ -39,5 +39,13 @@ EMP->Association([qw/Departments departments_role  1/],
 # _m2n relation already listed above
 
 
+## column filter
+
+EMP->ColumnType
+  (Uppercase =>
+   fromDB => sub { uc($_[0]) }) ;
+
+EMP::Departments->ColumnType(Uppercase => qw/dept_name/);
 
 1;
+

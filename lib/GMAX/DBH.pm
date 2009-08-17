@@ -1,4 +1,4 @@
-package DBIx::Shootout::GMAX::DBH;
+package GMAX::DBH;
 
 use strict;
 

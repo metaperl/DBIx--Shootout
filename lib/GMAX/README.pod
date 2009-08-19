@@ -18,3 +18,4 @@ L<http://www.sqlpower.ca/page/architect>
 =head1 USAGE
 
  cd $GMAX; source config.bashrc
+ cd DBIx::DataModel; perl play.pl

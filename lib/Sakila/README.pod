@@ -1,0 +1,19 @@
+=head1 NAME
+
+  DBIx::Shootout::Sakila::*
+
+=head1 DESCRIPTION
+
+This is a SQLite version of the sakila database:  L<http://dev.mysql.com/doc/sakila/en/sakila.html>
+
+It came ready for loading into MySQL. I have reworked it for the DBIx::Shootout to work under SQLite.
+
+You can view a graphic of the schema by loading F<schema.architect> using the free (and excellent)
+SQL Power Architect: L<http://www.sqlpower.ca/page/architect>
+
+=head1 USAGE
+
+ cd $Sakila; source config.bashrc
+ perl schema_loader.pl
+ cd DBIx/Class; perl play.pl
+ cd DBIx/DataModel; perl play.pl

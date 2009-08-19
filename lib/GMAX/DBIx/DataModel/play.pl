@@ -21,23 +21,25 @@ EMP->dbh($dbh);
 
 warn $dbh;
 
-my $e = EMP::Employees->fetch(110022);
+my $employee = EMP::Employees->fetch(110022);
 
 
-warn Dumper($e);
+warn Dumper($employee);
 
-warn Dumper($e->titles_role);
-warn Dumper($e->salaries_role);
-warn Dumper($e->departments_m2n);
+warn Dumper($employee->titles);
+warn Dumper($e->salaries);
+warn Dumper($e->departments);
 warn Dumper(EMP::Departments->fetch('d001'));
 
 
 use DateTime;
 
-$e->insert_into_salaries_role
+
+$employee->insert_into_salaries
   ({
     salary => '132000',
     from_date => '2009-08-13',
     to_date => '2009-08-15'
     });
+
 

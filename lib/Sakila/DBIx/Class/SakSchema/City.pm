@@ -10,28 +10,38 @@ __PACKAGE__->table("city");
 __PACKAGE__->add_columns(
   "city_id",
   {
-    data_type => "INTEGER",
+    data_type => "SMALLINT",
     default_value => undef,
     is_nullable => 0,
-    size => undef,
+    size => 5,
   },
   "city",
-  { data_type => "VARCHAR", default_value => "''", is_nullable => 0, size => 50 },
+  { data_type => "VARCHAR", default_value => "", is_nullable => 0, size => 50 },
   "country_id",
-  { data_type => "SMALLINT", default_value => "''", is_nullable => 0, size => 5 },
+  { data_type => "SMALLINT", default_value => "", is_nullable => 0, size => 5 },
   "last_update",
   {
     data_type => "TIMESTAMP",
-    default_value => "'CURRENT_TIMESTAMP'",
+    default_value => "CURRENT_TIMESTAMP",
     is_nullable => 0,
     size => 14,
   },
 );
 __PACKAGE__->set_primary_key("city_id");
+__PACKAGE__->has_many(
+  "addresses",
+  "SakSchema::Address",
+  { "foreign.city_id" => "self.city_id" },
+);
+__PACKAGE__->belongs_to(
+  "country_id",
+  "SakSchema::Country",
+  { country_id => "country_id" },
+);
 
 
-# Created by DBIx::Class::Schema::Loader v0.04006 @ 2009-08-19 13:06:11
-# DO NOT MODIFY THIS OR ANYTHING ABOVE! md5sum:8x0B5/NI9AV4m1phZkoPbw
+# Created by DBIx::Class::Schema::Loader v0.04006 @ 2009-08-19 16:14:46
+# DO NOT MODIFY THIS OR ANYTHING ABOVE! md5sum:DQcJTIZAhz5t/TBvICHD1g
 
 
 # You can replace this text with custom content, and it will be preserved on regeneration

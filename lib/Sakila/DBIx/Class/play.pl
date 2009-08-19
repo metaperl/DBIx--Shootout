@@ -9,11 +9,11 @@ use lib "$ENV{SAKILA}/DBIx/Class";
 use SakSchema; 
 
 
-use Sakila::DBH;
+use Sakila::DBH::MySQL;
 
 my $schema = SakSchema->connect
   (
-   sub { Sakila::DBH::dbh }
+   sub { Sakila::DBH::MySQL::dbh }
   );
 
 
@@ -36,4 +36,18 @@ sub fetch_julia {
     warn Dumper(\%data);
 }
 
-fetch_julia;
+sub prefetch {
+
+    my $rs = $schema->resultset('Customer')->search
+      (
+       { 'me.customer_id' => 599 },
+       { prefetch => [ 'payments' ] }
+      );
+
+    while (my $row = $rs->next) {
+	warn $row->payments->payment_id;
+    }
+}
+
+#fetch_julia;
+prefetch;

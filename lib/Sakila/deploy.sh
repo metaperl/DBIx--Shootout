@@ -1,3 +1,3 @@
 #!/bin/bash -x
 
-dbicdeploy -I./DBIx/Class SakSchema . SQLite
+dbicdeploy -I./DBIx/Class SakSchemaMySQL . SQLite
